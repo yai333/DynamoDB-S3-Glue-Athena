@@ -13,3 +13,5 @@ aws dynamodb batch-write-item --request-items file://forum.json --profile yiai -
 aws dynamodb batch-write-item --request-items file://thread.json --profile yiai --region ap-southeast-2
 
 aws dynamodb batch-write-item --request-items file://reply.json --profile yiai --region ap-southeast-2
+
+aws s3api create-bucket --bucket aws-glue-forum.reply.thread.demos --create-bucket-configuration LocationConstraint=ap-southeast-2 --region ap-southeast-2 --profile yiai
